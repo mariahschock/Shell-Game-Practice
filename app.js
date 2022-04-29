@@ -6,6 +6,11 @@ const btn3 = document.getElementById('shell3-btn');
 const shell1 = document.getElementById('shell1');
 const shell2 = document.getElementById('shell2');
 const shell3 = document.getElementById('shell3');
+
+const winSpan = document.getElementById('wins');
+const lossSpan = document.getElementById('losses');
+const totalSpan = document.getElementById('total');
+
 // let state
 let wins = 0;
 let losses = 0;
@@ -26,6 +31,9 @@ btn1.addEventListener('click', () => {
         shell3.classList.add('reveal');
         losses++;
     }
+    winSpan.textContent = wins;
+    lossSpan.textContent = losses;
+    totalSpan.textContent = wins + losses;
 });
 
 btn2.addEventListener('click', () => {
@@ -44,6 +52,9 @@ btn2.addEventListener('click', () => {
         shell3.classList.add('reveal');
         losses++;
     }
+    winSpan.textContent = wins;
+    lossSpan.textContent = losses;
+    totalSpan.textContent = wins + losses;
 });
 
 btn3.addEventListener('click', () => {
@@ -62,6 +73,9 @@ btn3.addEventListener('click', () => {
         shell3.classList.add('reveal');
         wins++;
     }
+    winSpan.textContent = wins;
+    lossSpan.textContent = losses;
+    totalSpan.textContent = wins + losses;
 });
   // get user input
   // use user input to update state 
