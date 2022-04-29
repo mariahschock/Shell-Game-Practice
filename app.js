@@ -19,6 +19,12 @@ btn1.addEventListener('click', () => {
     if (randomShell === 1) {
         shell1.classList.add('reveal');
         wins++;
+    } else if (randomShell === 2) {
+        shell2.classList.add('reveal');
+        losses++;
+    } else {
+        shell3.classList.add('reveal');
+        losses++;
     }
 });
 
@@ -26,12 +32,36 @@ btn2.addEventListener('click', () => {
     shell1.classList.remove('reveal');
     shell2.classList.remove('reveal');
     shell3.classList.remove('reveal');
+
+    const randomShell = Math.ceil(Math.random() * 3);
+    if (randomShell === 1) {
+        shell1.classList.add('reveal');
+        losses++;
+    } else if (randomShell === 2) {
+        shell2.classList.add('reveal');
+        wins++;
+    } else {
+        shell3.classList.add('reveal');
+        losses++;
+    }
 });
 
 btn3.addEventListener('click', () => {
     shell1.classList.remove('reveal');
     shell2.classList.remove('reveal');
     shell3.classList.remove('reveal');
+
+    const randomShell = Math.ceil(Math.random() * 3);
+    if (randomShell === 1) {
+        shell1.classList.add('reveal');
+        losses++;
+    } else if (randomShell === 2) {
+        shell2.classList.add('reveal');
+        losses++;
+    } else {
+        shell3.classList.add('reveal');
+        wins++;
+    }
 });
   // get user input
   // use user input to update state 

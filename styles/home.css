@@ -21,11 +21,19 @@
 }
 
 .ball {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     background-color:violet;
     display: none;
     position:absolute;
     top: 125px;
+}
+
+.shell.reveal .ball {
+    display: block;
+}
+
+.shell.reveal img {
+    transform: translateY(-60px);
 }
