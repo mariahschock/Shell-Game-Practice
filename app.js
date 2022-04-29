@@ -15,7 +15,11 @@ btn1.addEventListener('click', () => {
     shell2.classList.remove('reveal');
     shell3.classList.remove('reveal');
 
-    
+    const randomShell = Math.ceil(Math.random() * 3);
+    if (randomShell === 1) {
+        shell1.classList.add('reveal');
+        wins++;
+    }
 });
 
 btn2.addEventListener('click', () => {
